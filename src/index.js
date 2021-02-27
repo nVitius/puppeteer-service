@@ -147,7 +147,7 @@ module.exports = async function (options = {}) {
             // origin: '*',
             credentials: true
         }))
-        .use(bodyParser())
+        .use(bodyParser(options.bodyParser))
         .use(router.routes())
         .use(router.allowedMethods())
     ;
